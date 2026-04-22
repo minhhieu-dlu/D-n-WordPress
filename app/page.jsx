@@ -7,7 +7,15 @@ export const metadata = {
 };
 
 export default async function HomePage() {
-  const [posts, projects] = await Promise.all([getLatestPosts(3), getProjects(3)]);
+  let posts = [];
+  let projects = [];
+
+  try {
+    [posts, projects] = await Promise.all([getLatestPosts(3), getProjects(3)]);
+  } catch {
+    posts = [];
+    projects = [];
+  }
 
   return (
     <main className="page">

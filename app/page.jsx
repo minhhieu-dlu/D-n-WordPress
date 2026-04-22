@@ -2,8 +2,32 @@ import Link from "next/link";
 import { getLatestPosts, getProjects } from "../lib/wp";
 
 export const metadata = {
-  title: "Trang chủ | Portfolio Trần Minh Hiếu",
-  description: "Sinh viên năm 4 Đại học Đà Lạt, chuyên ngành CNTT - Kỹ thuật phần mềm"
+  title: "Trần Minh Hiếu | Sinh viên Kỹ thuật phần mềm Trường Đại Học Đà Lạt",
+  description:
+    "Portfolio Trần Minh Hiếu, sinh viên năm 4 CNTT Trường Đại Học Đà Lạt, chuyên Kỹ thuật phần mềm, WordPress, PHP và phát triển website chuyên nghiệp.",
+  keywords: [
+    "Trần Minh Hiếu",
+    "portfolio",
+    "kỹ thuật phần mềm",
+    "công nghệ thông tin",
+    "Đại học Đà Lạt",
+    "WordPress",
+    "PHP",
+    "web developer",
+    "front-end",
+    "back-end"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1
+    }
+  }
 };
 
 export default async function HomePage() {
